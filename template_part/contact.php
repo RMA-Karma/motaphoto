@@ -1,0 +1,1 @@
+<?php echo do_shortcode('[contact-form-7 id="f8837a6" title="Contact form 1"]');?>

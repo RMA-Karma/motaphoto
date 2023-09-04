@@ -1,49 +1,155 @@
 @font-face {
-    font-family: 'Space Mono';
-    src: url(font/SpaceMono-Bold.woff2);
-    src: url(font/SpaceMono-BoldItalic.woff2);
-    src: url(font/SpaceMono-Italic.woff2);
-    src: url(font/SpaceMono-Regular.woff2);
+  font-family: "Space Mono";
+  src: url(font/SpaceMono-Bold.woff2);
+  src: url(font/SpaceMono-Regular.woff2);
 }
-.header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Space Mono';
+@font-face {
+  font-family: "Poppins";
+  src: url(font/poppins/Poppins-Medium.woff2);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 1s;
 }
 
-#menu-menu-header {
-    display: flex;
-    gap: 70px;
-    list-style-type: none;
-    
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal-out {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
 }
 
-.menu a{
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+#wpcf7-f18-o1 {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding-top: 20px;
+  border: 5px solid #000000;
+  width: 597px;
+  height: 769px;
+}
+
+.wpcf7-form p {
+  color: #313144;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message textarea {
+  width: 263px;
+  resize: none;
+  border-radius: 8px;
+  border: 1px solid #B8BBC2;
+}
+
+.banner-contact {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.wpcf7-spinner {
+  display: flex;
+}
+
+.wpcf7-text {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #B8BBC2;
+  width: 263px;
+}
+
+.wpcf7-form-control {
+  margin-top: 8px;
+}
+
+.wpcf7-submit {
+  width: 263px;
+  border-radius: 2px;
+  height: 50px;
+  border: none;
+  background: #D8D8D8;
+  font-family: "Space Mono";
+  font-size: 12px;
+  transition: background 0.7s;
+}
+
+.wpcf7-submit:hover {
+  background: #000000;
+  color: white;
 }
 
 #menu-footer {
-    display: flex;
-    list-style-type: none;
-    gap: 70px;
-    justify-content: center;
-    border-top: 1px solid black;
-    font-family: 'Space Mono';
-    
+  display: flex;
+  list-style-type: none;
+  gap: 70px;
+  justify-content: center;
+  border-top: 1px solid black;
+  font-family: "Space Mono";
 }
 
 #menu-footer a {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-    padding-top: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-top: 10px;
 }
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Space Mono";
+}
+
+#menu-menu-header {
+  display: flex;
+  gap: 70px;
+  list-style-type: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.header a:hover {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

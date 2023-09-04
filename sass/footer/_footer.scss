@@ -1,0 +1,18 @@
+#menu-footer {
+    display: flex;
+    list-style-type: none;
+    gap: 70px;
+    justify-content: center;
+    border-top: 1px solid black;
+    font-family: 'Space Mono';
+    
+}
+
+#menu-footer a {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
