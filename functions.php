@@ -24,3 +24,11 @@ function add_defer_attribute($tag, $handle) {
   }
   
   add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
+
+  function wpc_theme_support() {
+	add_theme_support('custom-logo', array(
+		'flex-height' => true,
+		'flex-width'  => true,
+	));
+}
+add_action('after_setup_theme','wpc_theme_support');

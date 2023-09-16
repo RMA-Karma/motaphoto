@@ -1,0 +1,41 @@
+.grille-photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.entry-content {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.wp-block-image img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.overlay {
+    z-index: 10;
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    margin-top: -516px;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+;
+}
+
+@media screen and (min-width: 1575px) {
+    .grille-photo {
+        margin : 0% 15%;
+    }
+}
+
+.entry-content:hover {
+    .overlay{
+        display: block;
+    }
+}
+

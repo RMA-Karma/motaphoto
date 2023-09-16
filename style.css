@@ -41,7 +41,7 @@
     display: none;
   }
 }
-#wpcf7-f18-o1 {
+.wpcf7 {
   background-color: #fefefe;
   margin: 15% auto;
   padding-top: 20px;
@@ -152,4 +152,124 @@
 
 .header a:hover {
   font-weight: bold;
+}
+
+.grille-photo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.entry-content {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.wp-block-image img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.overlay {
+  z-index: 10;
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  margin-top: -516px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+@media screen and (min-width: 1575px) {
+  .grille-photo {
+    margin: 0% 15%;
+  }
+}
+.entry-content:hover .overlay {
+  display: block;
+}
+
+.info-photo {
+  display: flex;
+}
+
+.page-photo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 71%;
+}
+
+.zone-texte {
+  width: 50%;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.single-photo {
+  width: 50%;
+}
+
+.contact-nav {
+  height: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.single-contact {
+  display: flex;
+  width: 48%;
+  justify-content: space-between;
+}
+
+.photo-previous {
+  visibility: hidden;
+}
+
+.photo-previous img {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-previous a {
+  display: flex;
+  width: 4vw;
+}
+
+.nav-links {
+  width: 25px;
+}
+
+@media screen and (min-width: 1444px) {
+  .photo-previous a {
+    height: 90px;
+    width: 60px;
+  }
+}
+.nav-photo {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fleche-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.photo-next {
+  visibility: hidden;
+}
+
+.photo-next img {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-next a {
+  display: flex;
+  width: 4vw;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,86 @@
+.info-photo {
+    display: flex;
+}
+
+.page-photo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 71%;
+}
+.zone-texte{
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.single-photo {
+    width: 50%;
+}
+
+.contact-nav {
+    height: 118px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.single-contact {
+    display: flex;
+    width: 48%;
+    justify-content: space-between;
+}
+
+.photo-previous {
+    visibility: hidden;
+    
+}
+
+.photo-previous img{
+   width: 100%;
+   height: 100%;
+}
+
+.photo-previous a{
+    display: flex;
+    width: 4vw;
+    
+}
+
+.nav-links{
+    width: 25px;
+}
+
+@media screen and (min-width: 1444px) {
+    .photo-previous a {
+        height: 90px;
+        width: 60px;
+    };
+    
+}
+
+.nav-photo {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fleche-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.photo-next {
+    visibility: hidden;
+    
+}
+
+.photo-next img{
+   width: 100%;
+   height: 100%;
+}
+
+.photo-next a{
+    display: flex;
+    width: 4vw;
+    
+}

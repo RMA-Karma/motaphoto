@@ -7,7 +7,6 @@ contact.addEventListener("click", function() {
 }) 
 window.onclick = function(event) {
     if (event.target == modalContact) {
-        //modalContact.style.display = "none";
         modalContact.classList.add('modal-out')
     }}
 
@@ -15,6 +14,28 @@ window.onclick = function(event) {
 let bannerContact = new Image()
 let formulaireContact = document.querySelector('.wpcf7')
 let firstChild = formulaireContact.firstChild
-bannerContact.src = 'wp-content/themes/motaphoto/asset/Contact_header.png'
+bannerContact.src = 'http://localhost:8888/motaphoto/wp-content/uploads/2023/09/Contact-header.png'
 formulaireContact.insertBefore(bannerContact, firstChild)
 bannerContact.classList.add('banner-contact')
+
+
+//-------------------------------------------------PHOTO------------------------------------------------------------//
+
+let contactRef = document.querySelector(".bouton-contact-ref")
+contactRef.addEventListener("click", function() {
+    modalContact.style.display="block"
+    modalContact.classList.remove('modal-out')})
+
+let ref = document.querySelector(".ref-photo").innerHTML
+let valeurRef = document.querySelector('input[name="your-subject"]')
+valeurRef.value = ref
+
+let boutonPrevious = document.querySelector(".nav-previous")
+let photoPrevious = document.querySelector(".photo-previous")
+boutonPrevious.addEventListener("mouseover", function() {
+    photoPrevious.style.visibility="initial"
+})
+boutonPrevious.addEventListener("mouseout", function(){
+    photoPrevious.style.visibility="hidden"
+})
+
