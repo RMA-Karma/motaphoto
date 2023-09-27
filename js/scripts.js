@@ -32,10 +32,27 @@ valeurRef.value = ref
 
 let boutonPrevious = document.querySelector(".nav-previous")
 let photoPrevious = document.querySelector(".photo-previous")
+let boutonNext = document.querySelector(".nav-next")
+let photoNext = document.querySelector(".photo-next")
+let divPhoto = document.querySelector(".photo-prev-next")
 boutonPrevious.addEventListener("mouseover", function() {
     photoPrevious.style.visibility="initial"
+    divPhoto.style.visibility="initial"
+    photoNext.style.display="none"
 })
 boutonPrevious.addEventListener("mouseout", function(){
     photoPrevious.style.visibility="hidden"
+    divPhoto.style.visibility="hidden"
+    photoNext.style.display="block"
 })
 
+boutonNext.addEventListener("mouseover", function(){
+    divPhoto.style.visibility="initial"
+    photoPrevious.style.display="none"
+    photoNext.style.visibility="initial"
+})
+boutonNext.addEventListener("mouseout", function(){
+    photoNext.style.visibility="hidden"
+    photoPrevious.style.display="block"
+    divPhoto.style.visibility="hidden"
+})

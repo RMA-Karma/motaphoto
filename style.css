@@ -5,7 +5,25 @@
 }
 @font-face {
   font-family: "Poppins";
-  src: url(font/poppins/Poppins-Medium.woff2);
+  src: url(font/Poppins-Medium.woff2);
+  src: url(font/Poppins-ExtraLight.woff2);
+  src: url(font/Poppins-Medium.woff2);
+  src: url(font/Poppins-LightItalic.woff2);
+  src: url(font/Poppins-ExtraLightItalic.woff2);
+  src: url(font/Poppins-Regular.woff2);
+  src: url(font/Poppins-SemiBold.woff2);
+  src: url(font/Poppins-Black.woff2);
+  src: url(font/Poppins-ExtraBoldItalic.woff2);
+  src: url(font/Poppins-MediumItalic.woff2);
+  src: url(font/Poppins-Light.woff2);
+  src: url(font/Poppins-Bold.woff2);
+  src: url(font/Poppins-Thin.woff2);
+  src: url(font/Poppins-Italic.woff2);
+  src: url(font/Poppins-ThinItalic.woff2);
+  src: url(font/Poppins-BlackItalic.woff2);
+  src: url(font/Poppins-BoldItalic.woff2);
+  src: url(font/Poppins-SemiBoldItalic.woff2);
+  src: url(font/Poppins-ExtraBold.woff2);
 }
 .modal {
   display: none;
@@ -156,15 +174,13 @@
 
 .grille-photo {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 25px;
 }
 
 .entry-content {
-  width: 500px;
-  height: 500px;
   overflow: hidden;
-  margin: 10px;
+  width: 50%;
+  aspect-ratio: 1/1;
 }
 
 .wp-block-image img {
@@ -174,21 +190,34 @@
 
 .overlay {
   z-index: 10;
-  position: absolute;
-  height: 500px;
-  width: 500px;
-  margin-top: -516px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: -100%;
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
 }
 
-@media screen and (min-width: 1575px) {
-  .grille-photo {
-    margin: 0% 15%;
-  }
-}
 .entry-content:hover .overlay {
-  display: block;
+  display: flex;
+}
+
+.wp-block-image {
+  margin-bottom: 0;
+}
+
+.oeil {
+  display: flex;
+  margin: auto;
+  vertical-align: middle;
+  width: 46px;
+  height: 32px;
+}
+
+.link-lightbox {
+  position: absolute;
+  left: 92%;
+  top: 2%;
 }
 
 .info-photo {
@@ -199,6 +228,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 71%;
+  max-width: 1370px;
 }
 
 .zone-texte {
@@ -216,12 +246,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: solid 1px;
 }
 
 .single-contact {
   display: flex;
   width: 48%;
   justify-content: space-between;
+  border-top: solid 1px;
+  padding-top: 38px;
+  padding-bottom: 30px;
+}
+
+.single-contact p {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .photo-previous {
@@ -229,25 +271,19 @@
 }
 
 .photo-previous img {
-  width: 100%;
-  height: 100%;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 .photo-previous a {
   display: flex;
-  width: 4vw;
 }
 
 .nav-links {
   width: 25px;
 }
 
-@media screen and (min-width: 1444px) {
-  .photo-previous a {
-    height: 90px;
-    width: 60px;
-  }
-}
 .nav-photo {
   width: 100px;
   display: flex;
@@ -265,11 +301,75 @@
 }
 
 .photo-next img {
-  width: 100%;
-  height: 100%;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 .photo-next a {
   display: flex;
-  width: 4vw;
+}
+
+.photo-prev-next {
+  visibility: hidden;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.other {
+  margin: 5% 0 3% 0;
+}
+
+.other p {
+  font-family: "Space Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.8px;
+}
+
+.all-photo {
+  width: 263px;
+  border-radius: 2px;
+  height: 50px;
+  border: none;
+  background: #D8D8D8;
+  font-family: "Space Mono";
+  font-size: 12px;
+  transition: background 0.7s;
+}
+
+.all-photo:hover {
+  background: #000000;
+  color: white;
+}
+
+.bouton-all {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+}
+
+.zone-texte p {
+  text-transform: uppercase;
+  font-family: "Space Mono";
+}
+
+.zone-texte a {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #000000;
+}
+
+.zone-texte h2 {
+  font-family: "Space Mono";
+  font-size: 66px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 58px;
+  text-transform: uppercase;
+  width: 50%;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=style.css.map */

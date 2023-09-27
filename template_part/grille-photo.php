@@ -1,5 +1,5 @@
 
-<div class="grille-photo">
+<div class="grille-photo2">
  <?php $loop = new WP_Query( array( 'post_type' => 'photo', 'posts_per_page' => 12, 'paged' => $paged) ); ?>
 
  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
