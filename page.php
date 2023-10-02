@@ -9,17 +9,35 @@
  * @since Twenty Twenty-One 1.0
  */
 
-get_header();
+get_header(); ?>
+<section class="hero">
+	<?php $loop = new WP_Query( array( 	
+			'post_type' => 'photo',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'format',
+					'field'    => 'slug',                 
+					'terms'    => 'Paysage',
+					   ),),
+			'orderby' => 'rand',
+			'posts_per_page' => 1)); ?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post();?>
+			<?php the_content() ; ?>
+			<?php endwhile ; ?>
+	<h1>PHOTOGRAPHE EVENT</h1>
+</section>
 
-/* Start the Loop */
-while ( have_posts() ) :
-	the_post();
-	get_template_part( 'template_part/grille-photo' );
+<section class="grille-photo">
+		<?php $loop = new WP_Query( array( 
+			'post_type' => 'photo', 
+			'orderby' => array(
+				'date' => 'ASC',
+			),
+			'posts_per_page' => 12)); ?>
+	 	<?php while ( $loop->have_posts() ) : $loop->the_post();?>
+ 		<?php get_template_part('template_part/photo_block');?>
+ 		<?php endwhile ; ?>
+</section>
 
-	// If comments are open or there is at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) {
-		comments_template();
-	}
-endwhile; // End of the loop.
 
-get_footer();
+<?php get_footer(); ?>

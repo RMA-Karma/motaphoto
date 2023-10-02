@@ -155,3 +155,19 @@
     width: 50%;
     margin-bottom: 30px;
 }
+
+.grille-photo-single {
+    display: flex;
+    gap: 25px;
+}
+
+.entry-content {
+    overflow: hidden;
+    width: 50%;
+    aspect-ratio: 1/1;
+}
+
+.wp-block-image img {
+    object-fit: cover;
+    height: 100%;
+}

@@ -50,10 +50,10 @@ get_header(); ?>
 			</div>
 			<div class="fleche-nav">
 				<div class="nav-previous">
-					<?php previous_post_link( '%link', '<img src="http://localhost:8888/motaphoto/wp-content/themes/motaphoto/asset/fleche_pre.png">' ); ?>
+					<?php previous_post_link( '%link', '<img src='.home_url('wp-content/themes/motaphoto/asset/fleche_pre.png').'>' ); ?>
 				</div>
 				<div class="nav-next">
-					<?php next_post_link('%link', '<img src="http://localhost:8888/motaphoto/wp-content/themes/motaphoto/asset/fleche_suiv.png">' ); ?> 
+					<?php next_post_link('%link', '<img src='.home_url('wp-content/themes/motaphoto/asset/fleche_suiv.png').'>'); ?> 
 				</div>
 			</div>
 		</div>
@@ -63,39 +63,28 @@ get_header(); ?>
 			<p>VOUS AIMEREZ AUSSI</p>
 		</div>
 		<div>
-		<div class="grille-photo">
- 			<?php $terms = wp_get_post_terms( $post->ID, 'categorie');
-			$currentID = get_the_ID();
-			$loop = new WP_Query( array( 
-				'post_type' => 'photo', 
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'categorie',
-						'field'    => 'slug',                 
-						'terms'    => array($terms[0]->slug),
-				   ),),
-				'post__not_in' => array(
-					$currentID),
-				'orderby' => 'rand',
-				'posts_per_page' => 2)); ?>
-
-			 <?php
-			 while ( $loop->have_posts() ) : $loop->the_post();?>
-
- 			<div class="entry-content">
- 				<?php the_content() ; ?>
-     			<div class="overlay">
-      				<a href="<?php echo the_permalink(); ?>" class="oeil" ><img src="<?php echo home_url('wp-content/themes/motaphoto/asset/Icon_eye.png'); ?>" alt=""></a>
-      				<a href="single-page-photo.php" class="link-lightbox"><img src="<?php echo home_url('/wp-content/themes/motaphoto/asset/Icon_fullscreen.png'); ?>" alt=""></a>
-        		</div>
- 			</div>
- 			<?php endwhile ; ?>
+			<div class="grille-photo-single">
+ 				<?php $terms = wp_get_post_terms( $post->ID, 'categorie');
+				$currentID = get_the_ID();
+				$loop = new WP_Query( array( 
+					'post_type' => 'photo', 
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'categorie',
+							'field'    => 'slug',                 
+							'terms'    => array($terms[0]->slug),
+				   			),),
+					'post__not_in' => array($currentID),
+					'orderby' => 'rand',
+					'posts_per_page' => 2)); ?>
+			 	<?php while ( $loop->have_posts() ) : $loop->the_post();?>
+ 				<?php get_template_part('template_part/photo_block');?>
+ 				<?php endwhile ; ?>
+			</div>
 		</div>
-	<div class="bouton-all">
-		<a href="<?php echo home_url(); ?>">
-			<input class="all-photo" type="submit" value="Toutes les photos"> 
-		</a>
-	</div>
-
-
+		<div class="bouton-all">
+				<a href="<?php echo home_url(); ?>">
+				<input class="all-photo" type="submit" value="Toutes les photos"></a>
+		</div>
+</section>
 <?php get_footer(); ?>

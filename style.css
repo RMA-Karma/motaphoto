@@ -1,29 +1,14 @@
 @font-face {
   font-family: "Space Mono";
-  src: url(font/SpaceMono-Bold.woff2);
   src: url(font/SpaceMono-Regular.woff2);
 }
 @font-face {
+  font-family: "Space Mono";
+  src: url(font/SpaceMono-Bold.woff2);
+}
+@font-face {
   font-family: "Poppins";
-  src: url(font/Poppins-Medium.woff2);
-  src: url(font/Poppins-ExtraLight.woff2);
-  src: url(font/Poppins-Medium.woff2);
-  src: url(font/Poppins-LightItalic.woff2);
-  src: url(font/Poppins-ExtraLightItalic.woff2);
   src: url(font/Poppins-Regular.woff2);
-  src: url(font/Poppins-SemiBold.woff2);
-  src: url(font/Poppins-Black.woff2);
-  src: url(font/Poppins-ExtraBoldItalic.woff2);
-  src: url(font/Poppins-MediumItalic.woff2);
-  src: url(font/Poppins-Light.woff2);
-  src: url(font/Poppins-Bold.woff2);
-  src: url(font/Poppins-Thin.woff2);
-  src: url(font/Poppins-Italic.woff2);
-  src: url(font/Poppins-ThinItalic.woff2);
-  src: url(font/Poppins-BlackItalic.woff2);
-  src: url(font/Poppins-BoldItalic.woff2);
-  src: url(font/Poppins-SemiBoldItalic.woff2);
-  src: url(font/Poppins-ExtraBold.woff2);
 }
 .modal {
   display: none;
@@ -172,20 +157,8 @@
   font-weight: bold;
 }
 
-.grille-photo {
-  display: flex;
-  gap: 25px;
-}
-
-.entry-content {
-  overflow: hidden;
-  width: 50%;
-  aspect-ratio: 1/1;
-}
-
-.wp-block-image img {
-  object-fit: cover;
-  height: 100%;
+body {
+  margin: auto;
 }
 
 .overlay {
@@ -216,8 +189,41 @@
 
 .link-lightbox {
   position: absolute;
-  left: 92%;
+  right: 2%;
   top: 2%;
+}
+
+.titre-overlay {
+  position: absolute;
+  color: #fff;
+  bottom: 2%;
+  left: 3%;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.cat-overlay {
+  position: absolute;
+  right: 4%;
+  bottom: 2%;
+  text-transform: uppercase;
+  font-family: "Space Mono";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.4px;
+}
+
+.cat-overlay a {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #fff;
 }
 
 .info-photo {
@@ -372,4 +378,60 @@
   text-transform: uppercase;
   width: 50%;
   margin-bottom: 30px;
+}
+
+.grille-photo-single {
+  display: flex;
+  gap: 25px;
+}
+
+.entry-content {
+  overflow: hidden;
+  width: 50%;
+  aspect-ratio: 1/1;
+}
+
+.wp-block-image img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.grille-photo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 71%;
+  max-width: 1370px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grille-photo .entry-content {
+  width: 48%;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero img {
+  width: 100%;
+}
+.hero .wp-block-image {
+  height: 1000px;
+  width: 100%;
+}
+
+h1 {
+  position: absolute;
+  margin: auto;
+  vertical-align: middle;
+  font-family: "Space Mono";
+  font-size: 96px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 3px white;
 }/*# sourceMappingURL=style.css.map */
