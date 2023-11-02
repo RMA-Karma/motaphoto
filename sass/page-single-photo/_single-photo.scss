@@ -19,7 +19,7 @@
 }
 
 .contact-nav {
-    height: 118px;
+    height: 117px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,9 +29,11 @@
     display: flex;
     width: 48%;
     justify-content: space-between;
+    align-items: center;
     border-top: solid 1px;
     padding-top: 38px;
     padding-bottom: 30px;
+    height: 49px;
 }
 
 .single-contact p{
@@ -152,7 +154,7 @@
     font-weight: 400;
     line-height: 58px;
     text-transform: uppercase;
-    width: 50%;
+    width: 100%;
     margin-bottom: 30px;
 }
 
@@ -171,3 +173,112 @@
     object-fit: cover;
     height: 100%;
 }
+.single-photo .wp-block-image img {
+    object-fit: contain;
+}
+
+.single-photo:hover {
+    .overlay2 {
+        display: flex;
+        animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    } }
+
+    .overlay2 {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: -100%;
+        display: none;
+    }
+
+    .link-lightbox-single {
+        position: absolute;
+        right: 2%;
+        top: 2%;
+    }
+
+    @media screen and (max-width : 1024px) {
+
+        .page-photo {
+            width: 100%;
+        }
+
+        .info-photo {
+            flex-direction: column-reverse;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        .zone-texte{
+            width: auto;
+        }
+
+        .single-photo {
+            display: flex;
+            width: 100%;
+        }
+
+        .overlay2{
+            width: auto;
+        }
+
+        .nav-photo {
+            display: none;
+        }
+
+        .single-contact{
+            width: 100%;
+            flex-direction: column;
+            height: 116px;
+            align-items: center;
+            justify-content: normal;
+            padding: 0;
+        }
+
+        .meme-categorie {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bouton-all {
+            display: none;
+        }
+
+        .entry-content{
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .grille-photo-single {
+            flex-direction: column;
+        }
+
+        #menu-footer {
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        #menu-footer a {
+            color: #000000;
+        }
+
+        #menu-item-15 {
+            margin-top: 40px;
+        }
+
+        #menu-item-17 {
+            margin-bottom: 40px;
+        }
+    }

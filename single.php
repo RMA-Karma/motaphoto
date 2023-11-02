@@ -24,7 +24,9 @@ get_header(); ?>
 		</div>
 		<div class="single-photo">
 			<?php the_content(); ?>
-		</div>
+			<div class="overlay2">
+        		<span class="link-lightbox-single"><img src="<?php echo home_url('/wp-content/themes/motaphoto/asset/Icon_fullscreen.png'); ?>" alt=""></span>    </div>
+			</div>
 	</div>
 	<div class="contact-nav">
 		<div class="single-contact">
@@ -58,7 +60,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div>
+	<div class="meme-categorie">
 		<div class="other">
 			<p>VOUS AIMEREZ AUSSI</p>
 		</div>

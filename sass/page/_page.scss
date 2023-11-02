@@ -5,17 +5,18 @@
     max-width: 1370px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .grille-photo .entry-content{
     width: 48%;
+    margin: 1%;
 }
 
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 40;
 
     img {
     width: 100%;}
@@ -30,11 +31,17 @@ h1 {
     position: absolute;
     margin: auto;
     vertical-align: middle;
-    font-family: 'Space Mono';
+    font-family: 'Space Mono Bold';
     font-size: 96px;
     font-style: italic;
     font-weight: 700;
     line-height: normal;
     color: rgba(255, 255, 255, 0);
     -webkit-text-stroke: 3px white;
+}
+
+.bouton-charger-plus {
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
 }

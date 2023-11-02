@@ -10,13 +10,45 @@ window.onclick = function(event) {
         modalContact.classList.add('modal-out')
     }}
 
-//---IMAGE EN TETE BANNER--//
-let bannerContact = new Image()
-let formulaireContact = document.querySelector('.wpcf7')
-let firstChild = formulaireContact.firstChild
-bannerContact.src = 'http://localhost:8888/motaphoto/wp-content/uploads/2023/09/Contact-header.png'
-formulaireContact.insertBefore(bannerContact, firstChild)
-bannerContact.classList.add('banner-contact')
+    
+//---------------------------------------------------MENU MOBILE------------------------------------------------//
+
+let ouvertureMenu = document.getElementById("open-menu-logo")
+let menu = document.querySelector(".menu-menu-header-container")
+let fermetureMenu = document.getElementById("close-menu-logo")
+ouvertureMenu.addEventListener("click", function(){
+    menu.style.display="block"
+    menu.classList.remove('swipe-out-menu')
+    menu.classList.add('swipe-in-menu')
+    ouvertureMenu.style.display="none"
+    fermetureMenu.style.display="block"
+    document.body.style.overflow="hidden"
+})
+
+fermetureMenu.addEventListener("click", function(){
+    menu.classList.remove('swipe-in-menu')
+    menu.classList.add('swipe-out-menu')
+    fermetureMenu.style.display="none"
+    ouvertureMenu.style.display="block"
+    document.body.style.overflow="auto"
+})
+
+function largeurEcran() {
+    let largeur = window.innerWidth
+    if (largeur >= 1025) {
+      menu.classList.remove('swipe-out-menu')
+      ouvertureMenu.style.display="none"
+      fermetureMenu.style.display="none"
+      menu.style.display="block"
+    } else {
+        if (largeur <= 1024) {
+        ouvertureMenu.style.display="block"
+        menu.style.display="none"
+        document.body.style.overflow="auto"
+        fermetureMenu.style.display="none"
+    }}}
+
+window.onresize = largeurEcran
 
 
 //-------------------------------------------------PHOTO------------------------------------------------------------//
@@ -56,3 +88,6 @@ boutonNext.addEventListener("mouseout", function(){
     photoPrevious.style.display="block"
     divPhoto.style.visibility="hidden"
 })
+
+
+

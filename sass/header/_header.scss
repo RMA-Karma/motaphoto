@@ -5,6 +5,11 @@
     font-family: 'Space Mono';
 }
 
+.logo {
+    margin: 60px 0px 60px 0px;
+    gap: 30px;
+}
+
 #menu-menu-header {
     display: flex;
     gap: 70px;
@@ -12,6 +17,18 @@
     
 }
 
+.logo-titre-lien img {
+    width: 100%;
+}
+
+.toggle-nav {
+    width: 100%;
+}
+
+.close-nav {
+
+    width: 100%;
+}
 .menu a{
     text-decoration: none;
     color: black;
@@ -23,9 +40,18 @@
 }
 
 .header a:hover{
-    font-weight: bold;
+    font-family: 'Space Mono Bold';
 }
 
 body {
     margin: auto;
 }
+
+#open-menu-logo {
+    display: none;
+}
+
+#close-menu-logo {
+    display: none;
+}
+
