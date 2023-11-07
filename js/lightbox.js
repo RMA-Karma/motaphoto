@@ -21,7 +21,7 @@
         $('.close-lightbox').on('click', function() {
             $('.custom-lightbox').hide();
             $('.image-actuelle').removeClass('image-actuelle')
-            $('.custom-lightbox img').remove()
+            $('.lb-image').remove()
             $('.titre-lightbox').remove()
             $('.cat-lightbox').remove()
 

@@ -131,6 +131,15 @@
   padding-top: 10px;
 }
 
+#menu-footer a:hover {
+  font-family: "Space Mono Bold";
+}
+
+#menu-item-17 {
+  pointer-events: none;
+  cursor: default;
+}
+
 .header {
   display: flex;
   justify-content: space-around;
@@ -594,6 +603,7 @@ h1 {
 .lb-image {
   max-width: 100%;
   max-height: 100%;
+  margin: 0px 20px;
 }
 
 .close-lightbox {
@@ -618,6 +628,7 @@ h1 {
 .info-lightbox {
   display: flex;
   justify-content: space-between;
+  margin: 0px 20px;
 }
 
 .titre-lightbox {
@@ -640,6 +651,19 @@ h1 {
   letter-spacing: 0.1em;
 }
 
+.bouton-next, .bouton-prev {
+  display: flex;
+  gap: 5px;
+}
+
+.bouton-next:hover {
+  font-family: "Space Mono Bold";
+}
+
+.bouton-prev:hover {
+  font-family: "Space Mono Bold";
+}
+
 .filtre {
   font-family: "Poppins";
   display: flex;
@@ -650,7 +674,6 @@ h1 {
   max-width: 1370px;
   margin-top: 80px;
   margin-bottom: 39px;
-  overflow: scroll;
   gap: 20px;
 }
 
@@ -783,6 +806,23 @@ h1 {
   cursor: default;
 }
 
+@media screen and (max-width: 963px) {
+  .filtre-cat-form {
+    flex-direction: column;
+  }
+  .filtre {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .filtre {
+    flex-direction: column;
+  }
+  .filtre-date {
+    margin-left: 1%;
+    margin-right: unset;
+  }
+}
 @media screen and (max-width: 1024px) {
   .hero .wp-block-image {
     height: 600px;
@@ -870,5 +910,16 @@ h1 {
   h1 {
     font-size: 25px;
     -webkit-text-stroke: 1px white;
+  }
+  .logo-titre-lien img {
+    width: 80%;
+  }
+  .grille-photo {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .grille-photo .entry-content {
+    width: 80%;
   }
 }/*# sourceMappingURL=style.css.map */

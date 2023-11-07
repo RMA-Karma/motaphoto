@@ -16,3 +16,12 @@
     text-transform: uppercase;
     padding-top: 10px;
 }
+
+#menu-footer a:hover{
+    font-family: 'Space Mono Bold';
+}
+
+#menu-item-17 {
+    pointer-events: none;
+    cursor: default;
+}

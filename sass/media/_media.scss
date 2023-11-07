@@ -107,4 +107,18 @@
         -webkit-text-stroke: 1px white;
     }
 
+    .logo-titre-lien img {
+        width: 80%;
+    }
+
+    .grille-photo {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grille-photo .entry-content {
+        width: 80%;
+    }
+
   }

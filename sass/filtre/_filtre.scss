@@ -9,7 +9,6 @@
     max-width: 1370px;
     margin-top: 80px;
     margin-bottom: 39px;
-    overflow: scroll;
     gap: 20px;
   }
 
@@ -153,3 +152,28 @@
     pointer-events: none;
     cursor: default;
   }
+
+  @media screen and (max-width : 963px){
+
+
+      .filtre-cat-form {
+        flex-direction: column;
+      }
+
+      .filtre {
+        align-items: center;
+      }
+
+  }
+  @media screen and (max-width : 640px){
+
+
+      .filtre{
+        flex-direction: column;
+      }
+
+      .filtre-date {
+        margin-left: 1%;
+        margin-right: unset;
+      }
+    }

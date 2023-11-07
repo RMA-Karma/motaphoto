@@ -15,6 +15,7 @@
   .lb-image {
     max-width: 100%;
     max-height: 100%;
+    margin: 0px 20px;
   }
   
   .close-lightbox {
@@ -39,6 +40,7 @@
   .info-lightbox {
     display: flex;
     justify-content: space-between;
+    margin: 0px 20px;
   }
 
   .titre-lightbox {
@@ -61,4 +63,16 @@
     line-height: 21px;
     letter-spacing: 0.1em;
 
+  }
+
+  .bouton-next, .bouton-prev {
+    display: flex;
+    gap: 5px;
+  }
+
+  .bouton-next:hover {
+    font-family: 'Space Mono Bold';
+  }
+  .bouton-prev:hover {
+    font-family: 'Space Mono Bold';
   }
